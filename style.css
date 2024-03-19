@@ -1,47 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,300;1,400&display=swap');
 
-
-/* box-sizing: border-box CSS özelliği, bir elementin genişliği ve yüksekliği hesaplanırken iç kenar kutusu (padding), kenarlık (border) ve içerik kutusu (content) boyutlarının nasıl ele alınacağını belirler. */
-
 * {
-
     box-sizing: border-box;
 }
 
-/* HTML elementinin yüksekliğini, ebeveyninin yüksekliğine göre yüzde olarak ayarlar.*/
-
 html {
-
     height: 100%;
 }
 
-/* display: grid; CSS özelliği, bir container elementini bir ızgara sistemi olarak düzenlemek için kullanılır. Bu özellik sayesinde, içerideki öğeleri sütunlar ve satırlar arasında konumlandırabilir ve hizalayabilirsiniz.
-
- CSS kuralları, bir elementin dış kenar boşluğu (margin) ve iç kenar boşluğu (padding) değerlerini sıfır olarak ayarlar.
-
-margin: 0;: Bu kural, bir elementin dış kenar boşluğunu sıfır olarak belirtir. Dış kenar boşluğu, bir elementin etrafındaki boş alandır. Varsayılan olarak, tarayıcılar bazı elementlere (örneğin, body elementine) bir miktar dış kenar boşluğu ekler. margin: 0; kullanarak, bu varsayılan dış kenar boşluğunu kaldırabilir ve daha tutarlı bir görünüm elde edebilirsiniz.
-
-
-animation CSS özelliği, bir elemente animasyon uygulamak için kullanılır. Belirttiğiniz değerler, animasyonun nasıl çalışacağını belirler. İlgili örnekteki açıklamalara geçelim:
-
-
-animation: rotate 6s infinite alternate linear;
-rotate: Bu, animasyonun adıdır. Bu ad, daha önce tanımlanan bir @keyframes kurallı içinde belirtilen animasyon adıyla eşleşmelidir.
-
-6s: Bu, animasyonun bir döngüsünün sürmesi için geçen süreyi belirtir. Burada, animasyonun bir döngüsü 6 saniye sürecek.
-
-infinite: Bu, animasyonun sonsuz kez tekrar edeceğini belirtir. Yani, bir döngü tamamlandığında, animasyon hemen başa döner ve tekrar başlar.
-
-alternate: Bu, animasyonun her döngüde ters yönde (ileri-geri) oynatılacağını belirtir. Örneğin, bir döngüde saat yönünde döndükten sonra bir sonraki döngüde ters yönde (ters saat yönünde) dönecek.
-
-linear: Bu, animasyonun zaman çizelgesinin (timing function) lineer olduğunu belirtir. Yani, animasyon süreci boyunca değişen hızlar yerine sabit bir hızda gerçekleşir.
-
-*/
-
-
-
 body {
-    
     height: 100%;
     display: grid;
     place-items: center;
@@ -52,63 +19,17 @@ body {
     animation: rotate 6s infinite alternate linear;
 }
 
-/* position: fixed;: Bu özellik, elementin sabit bir konumda kalmasını sağlar. Yani, sayfa üzerindeki diğer elementlerle kaydırılsa bile bu element sabit bir konumda kalacaktır.
-
-top: -50vmin; left: -50vmin;: Bu iki özellik, elementin başlangıç pozisyonunu belirler. top ve left değerleri, elementin sol üst köşesinin sayfanın sol üst köşesinden -50vmin kadar uzakta olduğunu belirtir. Bu, elementin sayfanın dışında başlamasını sağlar.
-
-width: 100vmin; height: 100vmin;: Bu iki özellik, elementin genişliğini ve yüksekliğini belirler. 100vmin, sayfanın görülebilen boyutlarına göre yüzde cinsinden belirtilen bir değerdir. Bu durumda, elementin genişliği ve yüksekliği sayfanın görülebilen boyutlarıyla aynı olacak şekilde ayarlanır.
-
-border-radius: 47% 53% 61% 39 / 45% 51% 49% 55%;: Bu özellik, elementin kenar yuvarlaklıklarını belirtir. Bu dört değer, sırasıyla sol üst, sağ üst, sağ alt ve sol alt köşelerin kenar yuvarlaklıklarını belirler. İkinci dört değer ise bu kenar yuvarlaklıkların yatay düzlemlerdeki eğimlerini belirler.
-
-Sonuç olarak, bu CSS kodu, sayfa üzerinde sabit bir konumda başlangıç pozisyonu belirli, tam sayfa genişliğinde ve yüksekliğinde, belirgin kenar yuvarlaklıkları olan bir element oluşturur. */
-
-
-
-
-
 .circle {
-
     position: fixed;
     top: -50vmin;
     left: -50vmin;
     width: 100vmin;
     height: 100vmin;
-    border-radius:  47% 53% 61% 39 / 45% 51% 49% 55%;
+    border-radius: 47% 53% 61% 39 / 45% 51% 49% 55%;
     background: #65c8ff;
 }
 
-
-/* .circle::after CSS kuralı, bir HTML elementinin belirli bir pseudoelemanının (sanal element) stilini tanımlar. Bu, ::after pseudoelemanının .circle sınıfına sahip bir elementin içerisindeki içeriği stilize etmek için kullanıldığı anlamına gelir.
-
-content: "";
-Bu özellik, öğenin içeriğini belirler. Ancak, burada içeriğin boş bir dize olduğunu gösterir, yani öğenin içeriği yoktur.
-
-position: inherit;
-Bu özellik, öğenin pozisyonunu belirler. inherit değeri, öğenin pozisyonunu, doğrudan üst öğenin pozisyon özelliğine eşitlemek anlamına gelir. Yani, bu öğe, doğrudan üst öğenin pozisyonunu miras alır.
-
-right: -50vmin;
-bottom: -55vmin;
-Bu özellikler, öğenin sağ ve alt kenarlarının konumunu belirler. -50vmin ve -55vmin, öğenin sağa ve aşağıya doğru sayfanın dışına çıkacak şekilde konumlandırılmasını sağlar.
-
-
-width: inherit;
-height: inherit;
-border-radius: inherit;
-Bu üç özellik, sırasıyla öğenin genişliğini, yüksekliğini ve kenar yuvarlaklığını belirler. inherit değeri, bu özellikleri doğrudan üst öğenin değerlerine eşitlemek anlamına gelir. Yani, bu öğe, doğrudan üst öğenin genişliği, yüksekliği ve kenar yuvarlaklığını miras alır.
-
-
-background: #143d81;
-Bu özellik, öğenin arka plan rengini belirler. #143d81, mavi tonlarında bir renk kodunu temsil eder.
-
-Bu kuralların toplamı, bir öğenin içeriğinin olmadığı, pozisyonunun miras alındığı, sağ ve alt kenarlarının sayfanın dışına çıktığı, genişlik, yükseklik ve kenar yuvarlaklığın üst öğeden miras alındığı ve arka plan renginin mavi tonlarda olduğu bir tasarımı ifade eder.
-
-
-
-*/
-
-
 .circle::after {
-
     content: "";
     position: inherit;
     right: -50vmin;
@@ -119,46 +40,7 @@ Bu kuralların toplamı, bir öğenin içeriğinin olmadığı, pozisyonunun mir
     background: #143d81;
 }
 
-
-
-/* overflow: hidden;
-Bu özellik, bir elementin içeriği kutunun sınırları dışında olduğunda ne olacağını belirler. hidden değeri, içeriğin sınırların dışına taştığında görünmesini engeller ve sadece sınırlar içindeki kısmını gösterir.
-
-position: relative;
-Bu özellik, elementin pozisyonunu belirler. relative değeri, elementin normal akış içinde bulunduğu, ancak kendisi üzerine mutlak pozisyonlu alt öğelerin yerleştirilebileceği anlamına gelir.
-
-
-z-index: 3;
-Bu özellik, elementin z-eksenindeki sıralamasını belirler. Z-indeks, öğelerin diğer öğeler üzerinde veya altında ne kadar yükseklikte yer aldığını belirten bir sayıdır. Daha yüksek z-indeks değerleri, daha üstte görünen öğeler anlamına gelir.
-
-
-width: 100%;
-Bu özellik, elementin genişliğini yüzde cinsinden belirler. 100% değeri, elementin ebeveyninin genişliğini tamamen kaplamasını sağlar.
-
-margin: 0 20px;
-Bu özellik, elementin dış kenar boşluğunu belirler. 0 üst ve alt kenar boşluğunu, 20px ise sol ve sağ kenar boşluğunu temsil eder.
-
-padding: 160px 30px 38px;
-Bu özellik, elementin iç kenar boşluğunu belirler. Sırasıyla, üst, sağ, alt ve sol kenar boşluklarını belirtir.
-
-border-radius: 1.25rem;
-Bu özellik, elementin kenar yuvarlaklığını belirler. 1.25rem değeri, kenarların yuvarlaklığını belirtir.
-
-background: #fff;
-Bu özellik, elementin arka plan rengini belirler. #fff, beyaz renk kodunu temsil eder.
-
-box-shadow: 0 100px 100px rgb(0 0 0 / 10%);
-Bu özellik, elementin kutu gölgesini belirler. 0 100px 100px rgb(0 0 0 / 10%), bir hafif düşük kutu gölgesi ekler.
-
-Bu kuralların toplamı, bir konteynırın geniş bir beyaz kutu içinde içeriği ortalamak, kenarları yuvarlatmak ve hafif bir gölge eklemek için tasarlandığını gösterir.
-
-
-
-*/
-
-
 .card  {
-
     overflow: hidden;
     position: relative;
     z-index: 3;
@@ -170,7 +52,6 @@ Bu kuralların toplamı, bir konteynırın geniş bir beyaz kutu içinde içeri�
     text-align: center;
     box-shadow: 0 100px 100px rgb(0 0 0 / 10%);
 }
-
 
 .card::before{
     content: "";
